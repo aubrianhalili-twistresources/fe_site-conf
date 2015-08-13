@@ -128,7 +128,7 @@
 	 - -	need to set 'tooltwistConfig' as an environment variable and
 	 - -	comment out it's definition in web.xml (at the bottom).
 -->
-	<Context path="/" docBase="/home/tooltwist/server/tomcat/webapps/ttsvr" debug="0" reloadable="true" ></Context>
+        <Context path="" docBase="/home/tooltwist/server/tomcat/webapps/ttsvr" debug="0" reloadable="true" ></Context>
         <Context path="/ttsvr" docBase="/home/tooltwist/server/tomcat/webapps/ttsvr" debug="0" reloadable="true" ></Context>
         <!-- SingleSignOn valve, share authentication between web applications
              Documentation at: /docs/config/valve.html -->
