@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+
+<web-app
+version="3.0"
+   metadata-complete="false"
+   xmlns="http://java.sun.com/xml/ns/javaee"
+   xmlns:web="http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd"
+   xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+   xsi:schemaLocation="http://java.sun.com/xml/ns/javaee">
+
+    <display-name>Archetype Created Web Application</display-name>
+    <servlet>
+          <servlet-name>LoadConfigsServlet</servlet-name>
+          <servlet-class>tooltwist.misc.LoadConfigsServlet</servlet-class>
+          <load-on-startup>1</load-on-startup>
+      </servlet>
+    <servlet-mapping>
+        <servlet-name>LoadConfigsServlet</servlet-name>
+        <url-pattern>/LoadConfigsServlet</url-pattern>
+    </servlet-mapping>
+
+    <!-- Designer Servlets -->
+    <servlet>
+        <servlet-name>tooltwist.basic.LoginServlet</servlet-name>
+        <servlet-class>tooltwist.basic.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tooltwist.basic.LoginServlet</servlet-name>
+        <url-pattern>/servlet/tooltwist.basic.LoginServlet</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tooltwist.basic.LoginServlet</servlet-name>
+        <url-pattern>/login</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>tooltwist.basic.MainMenuUIM</servlet-name>
+        <servlet-class>tooltwist.basic.MainMenuUIM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tooltwist.basic.MainMenuUIM</servlet-name>
+        <url-pattern>/servlet/tooltwist.basic.MainMenuUIM</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>LoginDirector</servlet-name>
+        <servlet-class>tooltwist.basic.LoginDirector</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LoginDirector</servlet-name>
+        <url-pattern>/servlet/LoginDirector</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>LoginDirector</servlet-name>
+        <url-pattern>/servlet/tooltwist.basic.LoginDirector</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>tooltwist.wbd.DesignerUIM</servlet-name>
+        <servlet-class>tooltwist.wbd.DesignerUIM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>tooltwist.wbd.DesignerUIM</servlet-name>
+        <url-pattern>/servlet/tooltwist.wbd.DesignerUIM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>tooltwist.wbd.DesignerUIM</servlet-name>
+        <url-pattern>/designer</url-pattern>
+    </servlet-mapping>
+
+<!--
+    Used by Tooltwist WBD in development and production
+  -->
+    <servlet>
+        <servlet-name>RoutingUIM</servlet-name>
+        <servlet-class>tooltwist.ecommerce.RoutingUIM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/servlet/tooltwist.ecommerce.RoutingUIM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/n/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/s/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/p/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/c/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/m/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/home</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/MISSING_LINK/*</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>RoutingUIM</servlet-name>
+        <url-pattern>/ERROR_LINK/*</url-pattern>
+    </servlet-mapping>
+
+    <!-- List all the navpoints in a project -->
+    <servlet>
+        <servlet-name>ListNavpointsUIM</servlet-name>
+        <servlet-class>tooltwist.wbd.util.ListNavpointsUIM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ListNavpointsUIM</servlet-name>
+        <url-pattern>/servlet/tooltwist.wbd.util.ListNavpointsUIM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>ListNavpointsUIM</servlet-name>
+        <url-pattern>/listNavpoints</url-pattern>
+    </servlet-mapping>
+
+    <!-- Generate code -->
+    <servlet>
+        <servlet-name>GeneratorUIM</servlet-name>
+        <servlet-class>tooltwist.wbd.util.GeneratorUIM</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>GeneratorUIM</servlet-name>
+        <url-pattern>/servlet/tooltwist.wbd.util.GeneratorUIM</url-pattern>
+    </servlet-mapping>
+    <servlet-mapping>
+        <servlet-name>GeneratorUIM</servlet-name>
+        <url-pattern>/generator</url-pattern>
+    </servlet-mapping>
+
+    <env-entry>
+        <env-entry-name>TOOLTWIST_HOME</env-entry-name>
+        <env-entry-value>/home/tooltwist/site-conf</env-entry-value>
+        <env-entry-type>java.lang.String</env-entry-type>
+    </env-entry>
+
+    <!-- URL Rewrite -->
+    <filter>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <filter-class>org.tuckey.web.filters.urlrewrite.UrlRewriteFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>UrlRewriteFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+        <dispatcher>REQUEST</dispatcher>
+        <dispatcher>FORWARD</dispatcher>
+    </filter-mapping>
+</web-app>
