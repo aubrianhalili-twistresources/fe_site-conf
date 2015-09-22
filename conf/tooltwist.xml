@@ -57,7 +57,7 @@
 
   <webapp>
     <name>webdesign</name>
-    <mainProject>formsexpress</mainProject>
+    <mainProject>formsexpress-webdesign</mainProject>
     <application>webdesign</application>
     <dbType>mysql</dbType>
     <jdbcDriver>com.mysql.jdbc.Driver</jdbcDriver>
