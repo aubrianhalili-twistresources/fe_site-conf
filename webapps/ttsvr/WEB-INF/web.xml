@@ -11,6 +11,35 @@ version="3.0"
    xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
         http://java.sun.com/xml/ns/javaee/web-app_3_0.xsd">
 
+  <filter>
+    <filter-name>HttpHeaderSecurityFilter</filter-name>
+    <filter-class>org.apache.catalina.filters.HttpHeaderSecurityFilter</filter-class>
+    <init-param>
+      <param-name>hstsEnabled</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>hstsMaxAgeSeconds</param-name>
+      <param-value>31536000</param-value>
+    </init-param>
+    <init-param>
+      <param-name>hstsIncludeSubDomains</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>antiClickJackingEnabled</param-name>
+      <param-value>true</param-value>
+    </init-param>
+    <init-param>
+      <param-name>antiClickJackingOption</param-name>
+      <param-value>SAMEORIGIN</param-value>
+    </init-param>
+  </filter>
+  <filter-mapping>
+    <filter-name>HttpHeaderSecurityFilter</filter-name>
+    <url-pattern>*</url-pattern>
+  </filter-mapping>
+
   <display-name>Archetype Created Web Application</display-name>
   <servlet>
       <servlet-name>LoadConfigsServlet</servlet-name>
