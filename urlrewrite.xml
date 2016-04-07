@@ -71,4 +71,16 @@
      <from>^/user-details/id=([\w-]+)$</from>
      <to type="forward">/n/formsexpress-webdesign-30?id=$1</to>
    </rule>
+   <rule>
+     <from>^/customer-list$</from>
+     <to type="forward">/n/formsexpress-webdesign-32</to>
+   </rule>
+   <rule>
+     <from>^/add-customer$</from>
+     <to type="forward">/n/formsexpress-webdesign-33</to>
+   </rule>
+   <rule>
+     <from>^/edit-customer$</from>
+     <to type="forward">/n/formsexpress-webdesign-34?%{query-string}</to>
+   </rule>
 </urlrewrite>
