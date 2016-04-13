@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE urlrewrite PUBLIC "-//tuckey.org//DTD UrlRewrite 4.0//EN"
+        "http://www.tuckey.org/res/dtds/urlrewrite4.0.dtd">
+
+<urlrewrite>
+   <rule>
+     <from>^.*\.(js|css|png)$</from>
+     <set type="expires">1 year</set>
+   </rule>
+   <rule>
+     <from>^/staff-dashboard$</from>
+     <to type="forward">/n/formsexpress-webdesign-1</to>
+   </rule>
+   <rule>
+     <from>^/job-manager$</from>
+     <to type="forward">/n/formsexpress-webdesign-3</to>
+   </rule>
+   <rule>
+     <from>^/request-password$</from>
+     <to type="forward">/n/formsexpress-webdesign-15</to>
+     </rule>
+   <rule>
+     <from>^/password-requested$</from>
+     <to type="forward">/n/formsexpress-webdesign-16</to>
+   </rule>
+   <rule>
+     <from>^/change-password$</from>
+     <to type="forward">/n/formsexpress-webdesign-17</to>
+   </rule>
+   <rule>
+     <from>^/staff-login$</from>
+     <to type="forward">/n/formsexpress-webdesign-18</to>
+   </rule>
+   <rule>
+     <from>^/login-page$</from>
+     <to type="forward">/n/formsexpress-webdesign-19</to>
+   </rule>
+   <rule>
+     <from>^/password-changed$</from>
+     <to type="forward">/n/formsexpress-webdesign-20</to>
+   </rule>
+   <rule>
+     <from>^/client-dashboard$</from>
+     <to type="forward">/n/formsexpress-webdesign-21</to>
+   </rule>
+   <rule>
+     <from>^/jobs$</from>
+     <to type="forward">/n/formsexpress-webdesign-23</to>
+   </rule>
+   <rule>
+     <from>^/job-details/jobId=([\w-]+)$</from>
+     <to type="forward">/n/formsexpress-webdesign-24?jobId=$1</to>
+   </rule>
+   <rule>
+     <from>^/my-account$</from>
+     <to type="forward">/n/formsexpress-webdesign-25</to>
+   </rule>
+   <rule>
+     <from>^/healthcheck$</from>
+     <to type="forward">/n/formsexpress-webdesign-26</to>
+   </rule>
+   <rule>
+     <from>^/browser-support$</from>
+     <to type="forward">/n/formsexpress-webdesign-27</to>
+   </rule>
+   <rule>
+    <from>^/users$</from>
+    <to type="forward">/n/formsexpress-webdesign-29</to>
+   </rule>
+   <rule>
+     <from>^/user-details/id=([\w-]+)$</from>
+     <to type="forward">/n/formsexpress-webdesign-30?id=$1</to>
+   </rule>
+   <rule>
+     <from>^/customer-list$</from>
+     <to type="forward">/n/formsexpress-webdesign-32</to>
+   </rule>
+   <rule>
+     <from>^/add-customer$</from>
+     <to type="forward">/n/formsexpress-webdesign-33</to>
+   </rule>
+   <rule>
+     <from>^/edit-customer$</from>
+     <to type="forward">/n/formsexpress-webdesign-34?%{query-string}</to>
+   </rule>
+</urlrewrite>
